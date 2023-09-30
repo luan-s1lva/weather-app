@@ -10,7 +10,7 @@ import {
 import {
   WavesSharp as WavesSharpMUI,
   Speed as SpeedMUI,
-} from '@material-ui/icons';
+} from "@material-ui/icons";
 
 export const WavesSharp = styled(WavesSharpMUI)`
   margin-right: 10px;
@@ -34,7 +34,7 @@ export const Paper = styled(PaperMUI)`
 export const Typography = styled(TypographyMUI)`
   justify-content: center;
   font-size: 2.5em;
-  color: white;
+  color: black;
   display: flex;
 `;
 

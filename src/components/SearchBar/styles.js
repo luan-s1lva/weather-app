@@ -22,7 +22,6 @@ export const TextField = styled(TextFieldMUI)``;
 export const Typography = styled(TypographyMUI)`
   justify-content: center;
   font-size: 1.5em;
-  color: red;
 `;
 
 export const RoomIcon = styled(RoomIconMUI)`

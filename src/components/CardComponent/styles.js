@@ -11,8 +11,9 @@ export const Card = styled(CardMUI)`
   }
   width: 80%;
   margin: auto;
+  margin-top: 60px;
 `;
 
 export const CardContent = styled(CardContentMUI)`
-  background-color: gray;
+  background-color: #f5d982;
 `;

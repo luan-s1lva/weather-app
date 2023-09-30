@@ -15,35 +15,40 @@ const SearchBar = () => {
     try {
       axios
         .get(
-          "http://api.weatherapi.com/v1/current.json?key=" + API_KEY + "&q=" + cidade,
+          "http://api.weatherapi.com/v1/current.json?key=" +
+            API_KEY +
+            "&q=" +
+            cidade,
         )
         .then((response) => {
           setTemperatureData(response.data.current);
           setTemperatureCondition(response.data.current.condition);
         })
         .catch((error) => {
-          alert(error);
+          alert(
+            "Ocorreu um erro. Por favor volte mais tarde ou contate o desenvolvedor responsável.",
+          );
         });
     } catch (error) {
-      alert("Deu erro");
+      alert("Ocorreu um erro. Por favor volte mais tarde.");
     }
-  }
+  };
 
   return (
     <>
       <S.Container>
         <S.RoomIcon />
         <S.TextField
-            label="Nome da cidade"
-            name="cidade"
-            variant="outlined"
-            value={cidade}
-            onChange={event => setCidade(event.target.value)}
-          />
+          label="City Name"
+          name="cidade"
+          variant="outlined"
+          value={cidade}
+          onChange={(event) => setCidade(event.target.value)}
+        />
 
-          <S.Button onClick={() => getTemperatureData(cidade)}>
-            <S.SearchIcon />
-          </S.Button>
+        <S.Button onClick={() => getTemperatureData(cidade)}>
+          <S.SearchIcon />
+        </S.Button>
       </S.Container>
       <TemperatureStatus
         temperatureCondition={temperatureCondition}
