@@ -1,12 +1,15 @@
 import styled from "styled-components";
 
 import {
+  Button as ButtonMui,
   TextField as TextFieldMUI,
   Typography as TypographyMUI,
   IconButton as IconButtonMUI,
 } from "@material-ui/core";
 
 import { Room as RoomIconMUI, Search as SearchMUI } from "@material-ui/icons";
+
+export const Button = styled(ButtonMui)``;
 
 export const Container = styled.div`
   display: flex;

@@ -1,5 +1,4 @@
 import CardComponent from "./components/CardComponent";
-import ImageFrame from "./components/ImageFrame";
 import SearchBar from "./components/SearchBar";
 import TemperatureStatus from "./components/TemperatureStatus";
 
@@ -9,7 +8,6 @@ function App() {
       <h1>Olá Mundo!</h1>
       <CardComponent>
         {<SearchBar />}
-        {<TemperatureStatus />}
       </CardComponent>
     </>
   );
