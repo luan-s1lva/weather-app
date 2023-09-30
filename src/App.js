@@ -1,4 +1,5 @@
 import CardComponent from "./components/CardComponent";
+import ImageFrame from "./components/ImageFrame";
 import SearchBar from "./components/SearchBar";
 import TemperatureStatus from "./components/TemperatureStatus";
 
