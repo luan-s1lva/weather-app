@@ -5,6 +5,7 @@ import {
   TextField as TextFieldMUI,
   Typography as TypographyMUI,
   IconButton as IconButtonMUI,
+  Card as CardMUI,
 } from "@material-ui/core";
 
 import { Room as RoomIconMUI, Search as SearchMUI } from "@material-ui/icons";
@@ -15,6 +16,12 @@ export const Container = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+`;
+
+export const Card = styled(CardMUI)`
+  margin: auto;
+  width: 80%;
+  padding: 15px;
 `;
 
 export const TextField = styled(TextFieldMUI)``;

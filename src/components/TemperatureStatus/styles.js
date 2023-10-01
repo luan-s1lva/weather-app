@@ -5,6 +5,7 @@ import {
   Typography as TypographyMUI,
   Grid as GridMUI,
   Paper as PaperMUI,
+  Card as CardMUI,
 } from "@material-ui/core";
 
 import {
@@ -14,6 +15,15 @@ import {
 
 export const WavesSharp = styled(WavesSharpMUI)`
   margin-right: 10px;
+`;
+
+export const Card = styled(CardMUI)`
+  @media (min-width: 768px) {
+    width: 35%;
+  }
+  width: 50%;
+  margin: auto;
+  margin-top: 20px;
 `;
 
 export const Speed = styled(SpeedMUI)`
@@ -29,11 +39,12 @@ export const Grid = styled(GridMUI)`
 export const Paper = styled(PaperMUI)`
   display: flex;
   justify-content: center;
+  width: 100%;
+  variant: outlined;
 `;
 
 export const Typography = styled(TypographyMUI)`
   justify-content: center;
-  font-size: 2.5em;
   color: black;
   display: flex;
 `;
@@ -42,4 +53,5 @@ export const Container = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
 `;

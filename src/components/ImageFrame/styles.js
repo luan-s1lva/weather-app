@@ -12,7 +12,7 @@ export const Card = styled(CardMUI)`
   @media (min-width: 768px) {
     width: 35%;
   }
-  width: 80%;
+  width: 40%;
   margin: auto;
   margin-top: 20px;
   margin-bottom: 20px;

@@ -19,7 +19,7 @@ const SearchBar = () => {
             API_KEY +
             "&q=" +
             cidade,
-            {headers: { Authorization: "Bearer"}}
+          { headers: { Authorization: "Bearer" } },
         )
         .then((response) => {
           setTemperatureData(response.data.current);
@@ -37,20 +37,22 @@ const SearchBar = () => {
 
   return (
     <>
-      <S.Container>
-        <S.RoomIcon />
-        <S.TextField
-          label="City Name"
-          name="cidade"
-          variant="outlined"
-          value={cidade}
-          onChange={(event) => setCidade(event.target.value)}
-        />
+      <S.Card>
+        <S.Container>
+          <S.RoomIcon />
+          <S.TextField
+            label="City Name"
+            name="cidade"
+            variant="outlined"
+            value={cidade}
+            onChange={(event) => setCidade(event.target.value)}
+          />
 
-        <S.Button onClick={() => getTemperatureData(cidade)}>
-          <S.SearchIcon />
-        </S.Button>
-      </S.Container>
+          <S.Button onClick={() => getTemperatureData(cidade)}>
+            <S.SearchIcon />
+          </S.Button>
+        </S.Container>
+      </S.Card>
       <TemperatureStatus
         temperatureCondition={temperatureCondition}
         temperatureData={temperatureData}

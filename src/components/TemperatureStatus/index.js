@@ -7,24 +7,38 @@ const TemperatureStatus = ({ temperatureCondition, temperatureData }) => {
   return (
     <>
       <ImageFrame src={temperatureCondition.icon} />
-      <S.Typography>{temperatureData.temp_c}℃</S.Typography>
-      <S.Typography>{temperatureCondition.text}</S.Typography>
-      <br />
+      <S.Card>
+        <S.Typography>{temperatureData.temp_c}℃</S.Typography>
+        <S.Typography>{temperatureCondition.text}</S.Typography>
+      </S.Card>
+
       <S.Grid container spacing={2}>
         <S.Grid item xs={6}>
           <S.Paper>
-            <S.WavesSharp />
-            {temperatureData.humidity}%
+            <S.Container>
+              <S.WavesSharp />
+            </S.Container>
+
+            <S.Container>
+              <S.Typography>{temperatureData.humidity}%</S.Typography>
+              <S.Typography>Humidity</S.Typography>
+            </S.Container>
           </S.Paper>
-          <S.Paper>Humidity</S.Paper>
         </S.Grid>
 
         <S.Grid item xs={6}>
           <S.Paper>
-            <S.Speed />
-            {temperatureData.wind_kph} KM/H
+            <S.Container>
+              <S.Speed />
+            </S.Container>
+
+            <S.Container>
+              <S.Typography>{temperatureData.wind_kph} KM/H</S.Typography>
+              <S.Typography noWrap sx={{ fontSize: 18 }}>
+                Wind Speed
+              </S.Typography>
+            </S.Container>
           </S.Paper>
-          <S.Paper> Wind Speed</S.Paper>
         </S.Grid>
       </S.Grid>
     </>
