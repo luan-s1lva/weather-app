@@ -6,6 +6,7 @@ const Footer = () => {
     <>
       <S.Footer>
         <S.Typography>Author: Luan Silva</S.Typography>
+        <S.Typography>Powered by <a href="https://www.weatherapi.com/" title="Free Weather API">WeatherAPI.com</a></S.Typography>
         <S.Container>
           <S.P>
             <S.A

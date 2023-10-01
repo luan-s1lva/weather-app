@@ -15,10 +15,11 @@ const SearchBar = () => {
     try {
       axios
         .get(
-          "http://api.weatherapi.com/v1/current.json?key=" +
+          "https://api.weatherapi.com/v1/current.json?key=" +
             API_KEY +
             "&q=" +
             cidade,
+            {headers: { Authorization: "Bearer"}}
         )
         .then((response) => {
           setTemperatureData(response.data.current);
